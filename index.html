@@ -1,1 +1,459 @@
-# Alanya
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alanya Fırını | Traditionelle Bäckerei & Döner in Köln-Ehrenfeld</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            900: '#78350f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-950 text-stone-100 font-sans antialiased selection:bg-brand-500 selection:text-stone-950">
+
+    <!-- Top Bar / Announcement -->
+    <div class="bg-brand-600 text-stone-950 text-xs font-bold py-2 px-4 text-center tracking-wide">
+        <i class="fa-solid fa-fire mr-2"></i> Täglich frisch aus dem Steinofen: Ofenwarmes Fladenbrot & Pide in Ehrenfeld! • Durchgehend geöffnet bis 00:00 Uhr
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-stone-900/90 backdrop-blur-md border-b border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3">
+                <div class="bg-brand-600 text-stone-950 p-2.5 rounded-xl font-black text-xl tracking-tighter">
+                    <i class="fa-solid fa-bread-slice"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-wider block text-white">ALANYA FIRINI</span>
+                    <span class="text-xs text-brand-500 font-medium tracking-widest uppercase">Döner & Bäckerei Köln</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="#start" class="hover:text-brand-500 transition-colors">Startseite</a>
+                <a href="#ueber-uns" class="hover:text-brand-500 transition-colors">Über uns</a>
+                <a href="#speisekarte" class="hover:text-brand-500 transition-colors">Speisekarte</a>
+                <a href="#bewertungen" class="hover:text-brand-500 transition-colors">Bewertungen</a>
+                <a href="#anfahrt" class="hover:text-brand-500 transition-colors">Anfahrt & Kontakt</a>
+            </nav>
+
+            <!-- CTA Phone Button -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="tel:0221551993" class="bg-brand-600 hover:bg-brand-500 text-stone-950 font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-brand-600/20 flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i> 0221 551993
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden text-stone-300 hover:text-white focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-900 border-b border-stone-800 px-6 py-6 space-y-4">
+            <a href="#start" class="block text-lg font-medium hover:text-brand-500">Startseite</a>
+            <a href="#ueber-uns" class="block text-lg font-medium hover:text-brand-500">Über uns</a>
+            <a href="#speisekarte" class="block text-lg font-medium hover:text-brand-500">Speisekarte</a>
+            <a href="#bewertungen" class="block text-lg font-medium hover:text-brand-500">Bewertungen</a>
+            <a href="#anfahrt" class="block text-lg font-medium hover:text-brand-500">Anfahrt & Kontakt</a>
+            <div class="pt-4">
+                <a href="tel:0221551993" class="block text-center bg-brand-600 text-stone-950 font-bold py-3 rounded-xl">
+                    <i class="fa-solid fa-phone mr-2"></i> 0221 551993 anrufen
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="start" class="relative min-h-[85vh] flex items-center justify-center bg-stone-900 overflow-hidden">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 opacity-30 bg-[url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent"></div>
+
+        <div class="relative max-w-5xl mx-auto px-4 text-center py-20 z-10">
+            <div class="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-500/30 text-brand-400 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+                <i class="fa-solid fa-star text-brand-500"></i> 4,1 Sterne bei über 400 Google-Bewertungen in Ehrenfeld
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-tight">
+                Traditioneller Geschmack <br><span class="text-brand-500">Neu Erlebt</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-stone-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Willkommen bei Alanya Fırını. Genießen Sie unser weltbestes, ofenfrisches Fladenbrot, knusprige Pide, handgemachte Falafel und saftigen Döner aus eigener Herstellung.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#speisekarte" class="bg-brand-600 hover:bg-brand-500 text-stone-950 font-bold px-8 py-4 rounded-xl transition-all shadow-xl shadow-brand-600/20 text-center">
+                    Speisekarte Ansehen <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <a href="#anfahrt" class="bg-stone-900/80 hover:bg-stone-800 border border-stone-700 text-stone-200 font-bold px-8 py-4 rounded-xl transition-all text-center">
+                    <i class="fa-solid fa-location-dot text-brand-500 mr-2"></i> Wegbeschreibung
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Grid -->
+    <section class="py-16 bg-stone-900 border-y border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-stone-950 p-8 rounded-2xl border border-stone-800/80 relative group hover:border-brand-500/50 transition-all">
+                <div class="w-14 h-14 bg-brand-500/10 text-brand-500 rounded-xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-bread-slice"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Hauseigene Bäckerei</h3>
+                <p class="text-stone-400 leading-relaxed">Das Brot ist absolut überragend! Täglich frisch gebackenes Fladenbrot und warme Pide direkt aus dem Steinofen.</p>
+            </div>
+            <div class="bg-stone-950 p-8 rounded-2xl border border-stone-800/80 relative group hover:border-brand-500/50 transition-all">
+                <div class="w-14 h-14 bg-brand-500/10 text-brand-500 rounded-xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Durchgehend geöffnet</h3>
+                <p class="text-stone-400 leading-relaxed">Perfekt für den Snack mitten in der Nacht. Wir haben täglich bis 00:00 Uhr nachts für Sie geöffnet.</p>
+            </div>
+            <div class="bg-stone-950 p-8 rounded-2xl border border-stone-800/80 relative group hover:border-brand-500/50 transition-all">
+                <div class="w-14 h-14 bg-brand-500/10 text-brand-500 rounded-xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Handgemachte Falafel</h3>
+                <p class="text-stone-400 leading-relaxed">Frisch zubereitete Falafel mit einer großen Auswahl an hausgemachten Soßen – auch perfekt für Vegetarier.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über uns -->
+    <section id="ueber-uns" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-brand-500 font-bold uppercase tracking-widest text-sm">Tradition seit Jahren in Ehrenfeld</span>
+                <h2 class="text-3xl sm:text-4xl font-black mt-2 mb-6">Frische, Qualität und Liebe zum Backhandwerk</h2>
+                <p class="text-stone-300 leading-relaxed mb-6">
+                    Mitten in Köln-Ehrenfeld auf der Subbelrather Straße gelegen, ist das **Alanya Fırını** längst kein Geheimtipp mehr. Was uns auszeichnet, ist die Kombination aus einer traditionellen Backstube und einem erstklassigen Döner-Restaurant.
+                </p>
+                <p class="text-stone-400 leading-relaxed mb-8">
+                    Besucher schätzen vor allem unser ofenfrisches Brot, das den Döner und unsere Pide-Gerichte zu einem unvergleichlichen Geschmackserlebnis macht. Bei uns wird Gastfreundschaft großgeschrieben!
+                </p>
+                <div class="grid grid-cols-2 gap-6 border-t border-stone-800 pt-6">
+                    <div>
+                        <span class="block text-3xl font-black text-brand-500">400+</span>
+                        <span class="text-sm text-stone-400">Begeisterte Bewertungen</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-black text-brand-500">17 Std.</span>
+                        <span class="text-sm text-stone-400">Täglich für Sie da (07-00 Uhr)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-2 bg-gradient-to-r from-brand-600 to-amber-500 rounded-3xl blur-xl opacity-20"></div>
+                <div class="relative bg-stone-900 border border-stone-800 rounded-3xl p-6 sm:p-8">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-store text-brand-500"></i> Das erwartet Sie vor Ort
+                    </h3>
+                    <ul class="space-y-4 text-stone-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand-500 mt-1.5"></i>
+                            <span>Offene Auslage mit frischen Salaten und hausgemachten Soßen</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand-500 mt-1.5"></i>
+                            <span>Steinofen-Fladenbrot, das direkt vor den Augen der Gäste gebacken wird</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand-500 mt-1.5"></i>
+                            <span>Schneller, freundlicher Service – auch bei spätem Andrang</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand-500 mt-1.5"></i>
+                            <span>Ideal zum Mitnehmen oder für einen schnellen Snack vor Ort</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speisekarte mit Filter -->
+    <section id="speisekarte" class="py-24 bg-stone-900/50 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-500 font-bold uppercase tracking-widest text-sm">Genuss aus dem Ofen</span>
+                <h2 class="text-3xl sm:text-4xl font-black mt-2 mb-4">Unsere Speisekarte</h2>
+                <p class="text-stone-400">Entdecken Sie unsere Highlights – frisch zubereitet mit hochwertigen Zutaten.</p>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 mt-8">
+                    <button onclick="filterMenu('all')" class="menu-btn active-filter bg-brand-600 text-stone-950 font-bold px-5 py-2 rounded-xl text-sm transition-all">Alle</button>
+                    <button onclick="filterMenu('doener')" class="menu-btn bg-stone-800 text-stone-300 hover:bg-stone-700 font-bold px-5 py-2 rounded-xl text-sm transition-all">Döner & Fleisch</button>
+                    <button onclick="filterMenu('baeckerei')" class="menu-btn bg-stone-800 text-stone-300 hover:bg-stone-700 font-bold px-5 py-2 rounded-xl text-sm transition-all">Brot & Pide</button>
+                    <button onclick="filterMenu('falafel')" class="menu-btn bg-stone-800 text-stone-300 hover:bg-stone-700 font-bold px-5 py-2 rounded-xl text-sm transition-all">Vegetarisch & Falafel</button>
+                </div>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Item 1 -->
+                <div class="menu-item doener baeckerei bg-stone-900 border border-stone-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Klassischer Döner im Fladenbrot</h3>
+                            <span class="bg-brand-500/10 text-brand-400 text-xs font-bold px-2.5 py-1 rounded-full">Bestseller</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6">Saftiges Fleisch im ofenfrischen, hausgemachten Fladenbrot, verfeinert mit knackigem Salat und einer Soße nach Wahl.</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-stone-800 pt-4">
+                        <span class="text-xs text-stone-500 font-medium">Frisch zubereitet</span>
+                        <span class="text-brand-500 font-black">Top-Qualität</span>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-item falafel baeckerei bg-stone-900 border border-stone-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Handgemachte Falafel-Tasche</h3>
+                            <span class="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded-full">Vegetarisch</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6">Knusprig frittierte Falafelbällchen im frischen Brot mit großer Auswahl an hausgemachten Soßen und frischem Gemüse.</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-stone-800 pt-4">
+                        <span class="text-xs text-stone-500 font-medium">Sehr beliebt</span>
+                        <span class="text-brand-500 font-black">Hausgemacht</span>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-item baeckerei bg-stone-900 border border-stone-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Türkische Pide</h3>
+                            <span class="bg-brand-500/10 text-brand-400 text-xs font-bold px-2.5 py-1 rounded-full">Aus dem Ofen</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6">Traditionelle Teigschiffe mit verschiedenen Belägen, warm und knusprig direkt aus unserer hauseigenen Bäckerei.</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-stone-800 pt-4">
+                        <span class="text-xs text-stone-500 font-medium">Steinofen</span>
+                        <span class="text-brand-500 font-black">Traditionell</span>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-item baeckerei bg-stone-900 border border-stone-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Ofenfrisches Fladenbrot</h3>
+                            <span class="bg-brand-500/10 text-brand-400 text-xs font-bold px-2.5 py-1 rounded-full">Highlight</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6">Das Brot, das ganz Ehrenfeld liebt! Lauwarm, fluffig und direkt vor Ort frisch gebacken zum Mitnehmen.</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-stone-800 pt-4">
+                        <span class="text-xs text-stone-500 font-medium">Spezialität des Hauses</span>
+                        <span class="text-brand-500 font-black">Täglich frisch</span>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-item doener bg-stone-900 border border-stone-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Döner-Teller mit Beilagen</h3>
+                            <span class="bg-brand-500/10 text-brand-400 text-xs font-bold px-2.5 py-1 rounded-full">Deftig</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6">Zartes Dönerfleisch serviert auf einem Teller mit frischem Salat, Beilagen und leckeren Soßen nach Wahl.</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-stone-800 pt-4">
+                        <span class="text-xs text-stone-500 font-medium">Portion satt</span>
+                        <span class="text-brand-500 font-black">Herzhaft</span>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-item falafel bg-stone-900 border border-stone-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Falafel-Teller</h3>
+                            <span class="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded-full">Vegetarisch</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6">Knusprige Falafel mit einer bunten Salatvielfalt und verschiedenen Spezial-Soßen auf dem Teller serviert.</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-stone-800 pt-4">
+                        <span class="text-xs text-stone-500 font-medium">Frisch zubereitet</span>
+                        <span class="text-brand-500 font-black">Lecker</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Kundenbewertungen Section -->
+    <section id="bewertungen" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-brand-500 font-bold uppercase tracking-widest text-sm">Das sagen unsere Gäste</span>
+            <h2 class="text-3xl sm:text-4xl font-black mt-2 mb-4">Echte Google-Bewertungen</h2>
+            <p class="text-stone-400">Lesen Sie, was Besucher über unser Fladenbrot und unseren Service schreiben.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Review 1 -->
+            <div class="bg-stone-900 border border-stone-800 p-8 rounded-3xl relative">
+                <div class="flex items-center gap-1 text-brand-500 mb-4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-stone-200 italic mb-6 leading-relaxed">
+                    "Das Brot ist absolut überragend! So richtig lecker gebackenes Fladenbrot habe ich noch nie gegessen. Die restlichen Gebäcke außerdem..."
+                </p>
+                <div class="flex items-center justify-between border-t border-stone-800 pt-4">
+                    <div>
+                        <span class="block font-bold text-white">Pauli van Kuchen</span>
+                        <span class="text-xs text-stone-500">Local Guide</span>
+                    </div>
+                    <div class="text-brand-500 text-xs font-semibold bg-brand-500/10 px-3 py-1 rounded-full">Google Review</div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-stone-900 border border-stone-800 p-8 rounded-3xl relative">
+                <div class="flex items-center gap-1 text-brand-500 mb-4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-stone-200 italic mb-6 leading-relaxed">
+                    "Sehr nettes Personal und super leckeres Fladenbrot. Perfekt für einen späten Snack in Ehrenfeld. Absolute Empfehlung für jeden!"
+                </p>
+                <div class="flex items-center justify-between border-t border-stone-800 pt-4">
+                    <div>
+                        <span class="block font-bold text-white">Robert R.</span>
+                        <span class="text-xs text-stone-500">Google Review</span>
+                    </div>
+                    <div class="text-brand-500 text-xs font-semibold bg-brand-500/10 px-3 py-1 rounded-full">Google Review</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anfahrt & Kontakt Section -->
+    <section id="anfahrt" class="py-24 bg-stone-900/50 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-500 font-bold uppercase tracking-widest text-sm">Besuchen Sie uns</span>
+                <h2 class="text-3xl sm:text-4xl font-black mt-2 mb-4">Anfahrt & Öffnungszeiten</h2>
+                <p class="text-stone-400">Direkt im Herzen von Köln-Ehrenfeld gelegen. Kommen Sie vorbei!</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Info Box 1 -->
+                <div class="bg-stone-900 border border-stone-800 p-8 rounded-3xl">
+                    <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Adresse</h3>
+                    <p class="text-stone-300 mb-4">Subbelrather Str. 240<br>50825 Köln-Ehrenfeld</p>
+                    <a href="https://maps.google.com/?q=Subbelrather+Str.+240,+50825+Köln-Ehrenfeld" target="_blank" class="inline-flex items-center gap-2 text-brand-500 font-bold hover:text-brand-400 text-sm">
+                        Route in Google Maps öffnen <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Info Box 2 -->
+                <div class="bg-stone-900 border border-stone-800 p-8 rounded-3xl">
+                    <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Öffnungszeiten</h3>
+                    <p class="text-stone-300 mb-2">Montag – Sonntag:</p>
+                    <p class="text-brand-500 font-bold text-lg mb-4">07:00 – 00:00 Uhr</p>
+                    <p class="text-xs text-stone-500">Durchgehend geöffnet – auch nachts für Sie da!</p>
+                </div>
+
+                <!-- Info Box 3 -->
+                <div class="bg-stone-900 border border-stone-800 p-8 rounded-3xl">
+                    <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Kontakt</h3>
+                    <p class="text-stone-300 mb-4">Telefonische Rückfragen oder Vorbestellungen direkt unter:</p>
+                    <a href="tel:0221551993" class="inline-flex items-center gap-2 text-brand-500 font-bold hover:text-brand-400 text-lg">
+                        0221 551993 <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 border-t border-stone-900 py-12 text-stone-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="bg-brand-600 text-stone-950 p-2 rounded-lg font-black text-sm">
+                    <i class="fa-solid fa-bread-slice"></i>
+                </div>
+                <span class="font-bold text-white tracking-wider">ALANYA FIRINI</span>
+            </div>
+            <p>&copy; 2026 Alanya Fırını. Alle Rechte vorbehalten. Erstellt für professionelle Web-Präsenz (Einmaliger Festpreis ohne monatliche Kosten).</p>
+            <div class="flex space-x-6">
+                <a href="#start" class="hover:text-stone-300 transition-colors">Nach oben <i class="fa-solid fa-arrow-up ml-1"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript für Mobile Menü & Speisekarte Filter -->
+    <script>
+        // Mobile Menü Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Speisekarte Filter Funktion
+        function filterMenu(category) {
+            const items = document.querySelectorAll('.menu-item');
+            const buttons = document.querySelectorAll('.menu-btn');
+
+            // Aktiven Button stylen
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-stone-950');
+                btn.classList.add('bg-stone-800', 'text-stone-300');
+            });
+            event.target.classList.remove('bg-stone-800', 'text-stone-300');
+            event.target.classList.add('bg-brand-600', 'text-stone-950');
+
+            // Items filtern
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
